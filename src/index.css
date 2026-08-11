@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --font-default: "Inter"
+  --font-default: "Inter";
 }
 
 @layer base {
