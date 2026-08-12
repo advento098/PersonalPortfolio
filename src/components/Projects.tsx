@@ -1,8 +1,24 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { ArchitectureLine, ArchitectureNode, MiniArchitectureNode } from "./Architectures";
+import Bedan1 from "../assets/images/bedan-1.png";
+import Bedan2 from "../assets/images/bedan-2.png";
+import Bedan3 from "../assets/images/bedan-proto-1.jpg";
+import Bedan4 from "../assets/images/bedan-proto-2.jpg";
+import Bedan5 from "../assets/images/bedan-proto-3.jpg";
+import Etsync1 from "../assets/images/etsync-1.png";
+import Etsync2 from "../assets/images/etsync-2.png";
+import Etsync3 from "../assets/images/etsync-3.png";
+import Etsync4 from "../assets/images/etsync-4.png";
+import Etsync5 from "../assets/images/etsync-5.png";
+import Etsync6 from "../assets/images/etsync-6.png";
+
+import ProjectCarousel from "./ProjectCarousel";
 
 export default function Projects() {
+  const bedanImages = [Bedan1, Bedan2, Bedan3, Bedan4, Bedan5];
+  const etsyncImages = [Etsync1, Etsync2, Etsync3, Etsync4, Etsync5, Etsync6];
+
   return (
     <section
       id="projects"
@@ -88,12 +104,9 @@ export default function Projects() {
           <div className="grid overflow-hidden rounded-4xl border border-white/8 bg-white/[0.035] lg:grid-cols-[1.15fr_0.85fr]">
             {/* Visual */}
             <div className="relative min-h-105 overflow-hidden bg-[#24211D] sm:min-h-130">
-              {/* Placeholder */}
-              <img
-                src="https://placehold.co/1000x700/24211D/F4EFE7?text=BedanShelf"
-                alt="BedanShelf library system"
-                className="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-1000 ease-out group-hover:scale-[1.035]"
-              />
+              <div className="absolute inset-0">
+                <ProjectCarousel images={bedanImages} alt="BedanShelf" interval={3500} />
+              </div>
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-linear-to-br from-black/10 via-transparent to-black/50" />
@@ -119,12 +132,12 @@ export default function Projects() {
                 </div>
 
                 <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-white/10">
-                  <div className="h-full w-[72%] rounded-full bg-[#B88746]" />
+                  <div className="h-full w-full rounded-full bg-[#B88746]" />
                 </div>
 
                 <div className="mt-3 flex justify-between text-[10px] text-white/30">
                   <span>Available books</span>
-                  <span>72%</span>
+                  <span>100%</span>
                 </div>
               </div>
             </div>
@@ -167,10 +180,6 @@ export default function Projects() {
               <div className="mt-12 border-t border-white/[0.07] pt-6">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-white/25">Full-stack + hardware</span>
-
-                  <span className="text-xs font-medium text-white/50 transition-colors group-hover:text-[#C79A5B]">
-                    View case study →
-                  </span>
                 </div>
               </div>
             </div>
@@ -241,11 +250,9 @@ export default function Projects() {
 
             {/* Visual */}
             <div className="relative order-1 min-h-105 overflow-hidden bg-[#22201E] sm:min-h-130 lg:order-2">
-              <img
-                src="https://placehold.co/1000x700/22201E/F4EFE7?text=ETSync+Dashboard"
-                alt="ETSync payroll management system"
-                className="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-1000 ease-out group-hover:scale-[1.035]"
-              />
+              <div className="absolute inset-0">
+                <ProjectCarousel images={etsyncImages} alt="Etsync" interval={3500} />
+              </div>
 
               <div className="absolute inset-0 bg-linear-to-bl from-black/10 via-transparent to-black/50" />
 
