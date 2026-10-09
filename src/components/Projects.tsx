@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import type { ReactNode } from "react";
-import { ArchitectureLine, ArchitectureNode, MiniArchitectureNode } from "./Architectures";
 import SectionHeader from "./SectionHeader";
 import Bedan1 from "../assets/images/bedan-1.png";
 import Bedan2 from "../assets/images/bedan-2.png";
@@ -154,7 +153,7 @@ const projects: Project[] = [
     label: "Legal · In production",
     title: "Bringing an entire notarial workflow into one digital ecosystem.",
     description:
-      "A production platform for digital notarization. I work mainly on the backend: the API and the integrations behind it.",
+      "A production platform for digital notarization. I work mainly on its backend: the API behind Jitsi video calls, SignalR queues, digital signing, and payments.",
     tech: [
       ".NET Core API",
       "SignalR queuing",
@@ -167,35 +166,6 @@ const projects: Project[] = [
     images: ["https://placehold.co/1000x900/181614/F4EFE7?text=E-Notary+Management+System"],
     alts: ["E-Notary Management System"],
     featured: true,
-    overlay: (
-      <div className="absolute inset-x-6 bottom-6 rounded-2xl border border-white/10 bg-black/45 p-5 backdrop-blur-xl">
-        <div className="flex items-center justify-between">
-          <span className="text-[10px] tracking-[0.18em] text-white/35 uppercase">
-            System architecture
-          </span>
-
-          <span className="text-[10px] text-[#C79A5B]">Connected</span>
-        </div>
-
-        <div className="mt-5 flex items-center justify-between gap-2">
-          <ArchitectureNode label="Client" />
-          <ArchitectureLine />
-          <ArchitectureNode label="API" highlighted />
-          <ArchitectureLine />
-          <ArchitectureNode label="Services" />
-        </div>
-
-        <div className="mt-4 flex items-center justify-center">
-          <div className="h-6 w-px bg-white/10" />
-        </div>
-
-        <div className="grid grid-cols-3 gap-2">
-          <MiniArchitectureNode label="Jitsi" />
-          <MiniArchitectureNode label="SignalR" />
-          <MiniArchitectureNode label="Signing" />
-        </div>
-      </div>
-    ),
   },
 ];
 

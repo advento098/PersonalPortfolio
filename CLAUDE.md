@@ -40,7 +40,7 @@ Every section is `min-h-dvh` with its content vertically centred, and is designe
 - `featured` switches to the gold-bordered style (used by E-Notary).
 - All project repositories are private; don't add repo links.
 
-`ProjectCarousel.tsx` is an auto-advancing carousel (pause on hover, prev/next, dots). `Architectures.tsx` provides the node/line pieces of the E-Notary architecture overlay.
+`ProjectCarousel.tsx` is an auto-advancing carousel (pause on hover, prev/next, dots). E-Notary has no screenshots yet and uses a placehold.co title image.
 
 ### Styling
 
