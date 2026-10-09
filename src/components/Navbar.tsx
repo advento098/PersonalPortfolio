@@ -6,9 +6,9 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Why me", href: "#why-me" },
     { label: "Work", href: "#projects" },
-    { label: "Process", href: "#process" },
     { label: "Contact", href: "#contact" },
   ];
 

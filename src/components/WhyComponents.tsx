@@ -21,18 +21,18 @@ export function ProcessStep({
         delay,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative lg:text-center"
+      className="group relative text-center"
     >
       {/* Number */}
-      <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border border-black/8 bg-[#FAF9F7] text-xs font-semibold text-black/50 transition-all duration-300 group-hover:border-[#B88746]/40 group-hover:bg-[#B88746] group-hover:text-white lg:mx-auto">
+      <div className="relative z-10 mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-black/8 bg-[#FAF9F7] text-[10px] font-semibold text-black/50 transition-all duration-300 group-hover:border-[#B88746]/40 group-hover:bg-[#B88746] group-hover:text-white sm:h-12 sm:w-12 sm:text-xs">
         {number}
       </div>
 
       {/* Content */}
-      <div className="mt-6 lg:px-3">
-        <h3 className="text-lg font-semibold tracking-[-0.025em]">{title}</h3>
+      <div className="mt-3 sm:mt-4 lg:px-3">
+        <h3 className="text-xs font-semibold tracking-[-0.02em] sm:text-base">{title}</h3>
 
-        <p className="mt-3 text-sm leading-6 text-black/40">{description}</p>
+        <p className="mt-1 hidden text-sm leading-6 text-black/40 sm:block">{description}</p>
       </div>
     </motion.div>
   );
@@ -61,14 +61,14 @@ export function WhyCard({
         delay,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative overflow-hidden rounded-[1.5rem] border border-black/[0.07] bg-white p-7 transition-all duration-500 hover:-translate-y-1 hover:border-[#B88746]/20 hover:shadow-[0_20px_60px_rgba(0,0,0,0.06)] sm:p-8"
+      className="group relative overflow-hidden rounded-2xl border border-black/[0.07] bg-white p-4 transition-all duration-500 hover:-translate-y-1 hover:border-[#B88746]/20 hover:shadow-[0_20px_60px_rgba(0,0,0,0.06)] sm:rounded-3xl sm:p-7"
     >
       {/* Ambient hover */}
       <div className="pointer-events-none absolute -top-24 -right-24 h-48 w-48 rounded-full bg-[#B88746]/[0.06] opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
       <div className="relative">
         {/* Top */}
-        <div className="flex items-center justify-between">
+        <div className="hidden items-center justify-between sm:flex short:hidden">
           <span className="text-xs font-medium tracking-[0.15em] text-[#B88746]">{number}</span>
 
           <span className="flex h-10 w-10 items-center justify-center rounded-full border border-black/[0.07] text-lg text-black/30 transition-all duration-300 group-hover:border-[#B88746]/30 group-hover:text-[#B88746]">
@@ -77,25 +77,14 @@ export function WhyCard({
         </div>
 
         {/* Content */}
-        <h3 className="mt-10 max-w-sm text-xl leading-snug font-semibold tracking-[-0.03em]">
+        <h3 className="max-w-sm text-base leading-snug font-semibold tracking-[-0.03em] sm:mt-6 sm:text-xl short:mt-0">
           {title}
         </h3>
 
-        <p className="mt-4 max-w-sm text-sm leading-6 text-black/40">{description}</p>
-
-        {/* Bottom accent */}
-        <div className="mt-10 h-px w-8 bg-[#B88746]/40 transition-all duration-500 group-hover:w-16" />
+        <p className="mt-1.5 max-w-sm text-xs leading-5 text-black/40 sm:mt-3 sm:text-sm sm:leading-6">
+          {description}
+        </p>
       </div>
     </motion.div>
-  );
-}
-
-export function TrustItem({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="group border-white/[0.07] px-7 py-7 transition-colors duration-300 last:border-r-0 hover:bg-white/[0.03] sm:px-8 lg:border-r">
-      <p className="text-lg font-semibold tracking-[-0.025em] text-white/85">{value}</p>
-
-      <p className="mt-1 text-xs text-white/30">{label}</p>
-    </div>
   );
 }

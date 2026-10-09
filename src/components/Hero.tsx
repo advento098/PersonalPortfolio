@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center overflow-hidden px-6 pt-32 pb-20 sm:px-8 lg:px-12"
+      className="relative flex min-h-dvh items-center overflow-hidden px-6 pt-24 pb-12 sm:px-8 lg:px-12 short:pt-20 short:pb-6"
     >
       {/* Subtle background grid */}
       <div
@@ -26,7 +26,7 @@ export default function Hero() {
 
       {/* Main content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl">
-        <div className="grid items-center gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           {/* --------------------------------------------------------
                 LEFT
             --------------------------------------------------------- */}
@@ -36,13 +36,13 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="mb-8 inline-flex items-center gap-2.5 rounded-full border border-[#B88746]/20 bg-white/70 px-3.5 py-2 text-xs font-medium text-black/60 shadow-sm backdrop-blur-sm"
+              className="mb-[clamp(1rem,3dvh,2rem)] inline-flex items-center gap-2.5 rounded-full border border-[#B88746]/20 bg-white/70 px-3.5 py-2 text-xs font-medium text-black/60 shadow-sm backdrop-blur-sm"
             >
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#B88746]/50" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[#B88746]" />
               </span>
-              Available for freelance projects
+              Available for work
             </motion.div>
 
             {/* Eyebrow */}
@@ -50,7 +50,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="mb-5 text-xs font-semibold tracking-[0.22em] text-[#B88746] uppercase"
+              className="mb-[clamp(0.75rem,2dvh,1.25rem)] text-xs font-semibold tracking-[0.22em] text-[#B88746] uppercase"
             >
               Full-Stack Software Engineer
             </motion.p>
@@ -64,7 +64,7 @@ export default function Hero() {
                 delay: 0.35,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="max-w-4xl text-[clamp(3.4rem,7vw,7rem)] leading-[0.91] font-semibold tracking-[-0.065em]"
+              className="max-w-4xl text-[clamp(2.5rem,min(7vw,8.5dvh),7rem)] leading-[0.91] font-semibold tracking-[-0.065em]"
             >
               Your vision.
               <br />
@@ -83,10 +83,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.55 }}
-              className="mt-9 max-w-xl text-base leading-7 text-black/55 sm:text-lg sm:leading-8"
+              className="mt-[clamp(1.25rem,4dvh,2.25rem)] max-w-xl text-base leading-7 text-black/55 sm:text-lg sm:leading-8"
             >
-              I build thoughtful digital experiences and reliable software systems that turn complex
-              business problems into simple, scalable solutions.
+              I'm <span className="font-semibold text-black">Pons Anthony Advento</span>. I build
+              web apps and business systems end to end, from the interface to the database.
             </motion.p>
 
             {/* CTA */}
@@ -94,7 +94,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.65 }}
-              className="mt-9 flex flex-col gap-3 sm:flex-row"
+              className="mt-[clamp(1.25rem,4dvh,2.25rem)] flex flex-col gap-3 sm:flex-row"
             >
               <a
                 href="#projects"
@@ -124,10 +124,10 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.85 }}
-              className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-black/[0.07] pt-6"
+              className="mt-[clamp(1.5rem,5dvh,3rem)] flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-black/[0.07] pt-[clamp(1rem,3dvh,1.5rem)] short:hidden"
             >
               <div>
-                <p className="text-lg font-semibold tracking-tight">3+</p>
+                <p className="text-lg font-semibold tracking-tight">4</p>
                 <p className="mt-0.5 text-xs text-black/40">Featured systems</p>
               </div>
 
@@ -158,7 +158,7 @@ export default function Hero() {
               delay: 0.35,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="relative mx-auto hidden w-full max-w-120 lg:block"
+            className="relative mx-auto hidden w-full max-w-[min(30rem,52dvh)] lg:block"
           >
             {/* Decorative orbit */}
             <div className="absolute -inset-8 rounded-[3rem] border border-black/4" />
@@ -240,28 +240,12 @@ export default function Hero() {
                 </div>
               </div>
             </motion.div>
-
-            {/* Small status badge */}
-            <motion.div
-              animate={{ y: [0, -5, 0] }}
-              transition={{
-                duration: 3.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute -bottom-7 left-1/2 -translate-x-1/2 rounded-full border border-black/[0.07] bg-white/90 px-4 py-2.5 shadow-[0_15px_40px_rgba(0,0,0,0.07)] backdrop-blur-xl"
-            >
-              <div className="flex items-center gap-2 text-xs font-medium text-black/60">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#B88746]" />
-                Available for new projects
-              </div>
-            </motion.div>
           </motion.div>
         </div>
 
         {/* Scroll indicator */}
         <motion.a
-          href="#about"
+          href="#services"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}

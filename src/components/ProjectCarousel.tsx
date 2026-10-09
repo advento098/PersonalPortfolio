@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 interface ProjectCarouselProps {
   images: string[];
   alt?: string;
+  alts?: string[];
   interval?: number;
   fit?: "cover" | "contain";
 }
@@ -11,6 +12,7 @@ interface ProjectCarouselProps {
 export default function ProjectCarousel({
   images,
   alt = "Project screenshot",
+  alts,
   interval = 5000,
   fit = "cover",
 }: ProjectCarouselProps) {
@@ -47,7 +49,7 @@ export default function ProjectCarousel({
           <img
             key={image}
             src={image}
-            alt={`${alt} ${index + 1}`}
+            alt={alts?.[index] ?? `${alt} ${index + 1}`}
             className={`absolute inset-0 h-full w-full transition-all duration-700 ease-out ${fit === "cover" ? "object-cover" : "object-contain"} ${
               index === activeIndex ? "scale-100 opacity-100" : "scale-[1.03] opacity-0"
             } `}

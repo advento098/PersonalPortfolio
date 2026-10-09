@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-[#171717] px-6 pt-28 pb-8 text-white sm:px-8 lg:px-12 lg:pt-36"
+      className="relative flex min-h-dvh flex-col overflow-hidden border-t border-white/[0.07] bg-[#171717] px-6 pt-24 pb-6 text-white sm:px-8 lg:px-12 short:pt-20"
     >
       {/* ==========================================================
       AMBIENT BACKGROUND
@@ -30,244 +30,115 @@ export default function Footer() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl">
-        {/* ========================================================
-        CONTACT CTA
-    ========================================================= */}
-        <div className="text-center">
-          {/* Eyebrow */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center justify-center gap-3"
-          >
-            <span className="h-px w-8 bg-[#B88746]" />
-
-            <span className="text-xs font-semibold tracking-[0.22em] text-[#D1A96D] uppercase">
-              Let's work together
-            </span>
-
-            <span className="h-px w-8 bg-[#B88746]" />
-          </motion.div>
-
-          {/* Main heading */}
-          <motion.h2
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{
-              duration: 0.9,
-              delay: 0.05,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="mx-auto mt-8 max-w-5xl text-4xl leading-[1.02] font-semibold tracking-tighter sm:text-5xl lg:text-[5.5rem]"
-          >
-            Have an idea?
-            <br />
-            <span className="text-white/25">Let's build it.</span>
-          </motion.h2>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="mx-auto mt-8 max-w-xl text-base leading-7 text-white/40"
-          >
-            Whether you need a complete application, a reliable backend, or someone to turn a rough
-            idea into something real, I'd love to hear what you're working on.
-          </motion.p>
-
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row"
-          >
-            <a
-              href="mailto:ponsadvento08@gmail.com"
-              className="group flex items-center gap-3 rounded-full bg-[#F4EFE7] px-7 py-4 text-sm font-semibold text-[#171717] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_15px_50px_rgba(255,255,255,0.12)]"
-            >
-              Start a conversation
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black/8 transition-transform duration-300 group-hover:translate-x-1">
-                <ArrowUpRight size={14} />
-              </span>
-            </a>
-
-            <a
-              href="tel:+639617508181"
-              className="rounded-full border border-white/10 px-7 py-4 text-sm font-medium text-white/50 transition-all duration-300 hover:border-white/20 hover:text-white"
-            >
-              +63 961 750 8181
-            </a>
-          </motion.div>
-        </div>
-
-        {/* ========================================================
-        CONTACT INFORMATION
-    ========================================================= */}
+      {/* ========================================================
+      CONTACT CTA
+  ========================================================= */}
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center text-center">
+        {/* Eyebrow */}
         <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="flex items-center justify-center gap-3"
+        >
+          <span className="h-px w-8 bg-[#B88746]" />
+
+          <span className="text-xs font-semibold tracking-[0.22em] text-[#D1A96D] uppercase">
+            Let's work together
+          </span>
+
+          <span className="h-px w-8 bg-[#B88746]" />
+        </motion.div>
+
+        {/* Main heading */}
+        <motion.h2
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-white/2.5] mx-auto mt-24 max-w-4xl rounded-4xl border border-white/8 p-6 backdrop-blur-xl sm:p-8"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{
+            duration: 0.9,
+            delay: 0.05,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="mx-auto mt-[clamp(1rem,4dvh,2rem)] max-w-5xl text-[clamp(2.25rem,min(8vw,10dvh),5.5rem)] leading-[1.02] font-semibold tracking-tighter"
         >
-          <div className="grid gap-3 sm:grid-cols-3">
-            {/* Email */}
-            <a
-              href="mailto:ponsadvento08@gmail.com"
-              className="group rounded-[1.25rem] border border-transparent p-5 transition-all duration-300 hover:border-white/[0.07] hover:bg-white/2.5"
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-semibold tracking-[0.18em] text-white/25 uppercase">
-                  Email
-                </span>
+          Have an idea?
+          <br />
+          <span className="text-white/25">Let's build it.</span>
+        </motion.h2>
 
-                <ArrowUpRight
-                  size={14}
-                  className="text-white/20 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#D1A96D]"
-                />
-              </div>
+        {/* Description */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="mx-auto mt-[clamp(1rem,4dvh,2rem)] max-w-xl text-base leading-7 text-white/40"
+        >
+          A full application, a backend, or just a rough idea. Tell me what you're working on.
+        </motion.p>
 
-              <p className="mt-4 text-sm font-medium break-all text-white/65 transition-colors group-hover:text-white">
-                ponsadvento08@gmail.com
-              </p>
-            </a>
-
-            {/* Phone */}
-            <a
-              href="tel:+639617508181"
-              className="group rounded-[1.25rem] border border-transparent p-5 transition-all duration-300 hover:border-white/[0.07] hover:bg-white/2.5"
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-semibold tracking-[0.18em] text-white/25 uppercase">
-                  Phone
-                </span>
-
-                <ArrowUpRight
-                  size={14}
-                  className="text-white/20 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#D1A96D]"
-                />
-              </div>
-
-              <p className="mt-4 text-sm font-medium text-white/65 transition-colors group-hover:text-white">
-                +63 961 750 8181
-              </p>
-            </a>
-
-            {/* Availability */}
-            <div className="rounded-[1.25rem] border border-transparent p-5">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-semibold tracking-[0.18em] text-white/25 uppercase">
-                  Availability
-                </span>
-
-                <span className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#B88746]" />
-
-                  <span className="text-[10px] text-[#D1A96D]">Open</span>
-                </span>
-              </div>
-
-              <p className="mt-4 text-sm font-medium text-white/65">Available for freelance</p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* ========================================================
-        SOCIAL LINKS
-    ========================================================= */}
+        {/* CTA */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-white/[0.07] pt-8 sm:flex-row"
+          className="mt-[clamp(1.5rem,5dvh,2.5rem)] flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
-          <p className="text-xs text-white/25">Prefer to connect somewhere else?</p>
+          <a
+            href="mailto:ponsadvento08@gmail.com"
+            className="group flex items-center gap-3 rounded-full bg-[#F4EFE7] px-7 py-4 text-sm font-semibold text-[#171717] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_15px_50px_rgba(255,255,255,0.12)]"
+          >
+            Start a conversation
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black/8 transition-transform duration-300 group-hover:translate-x-1">
+              <ArrowUpRight size={14} />
+            </span>
+          </a>
 
-          <div className="flex items-center gap-3">
-            <a
-              href="https://github.com/advento098"
-              target="_blank"
-              rel="noreferrer"
-              className="group flex items-center gap-3 rounded-full border border-white/8 px-4 py-2.5 transition-all duration-300 hover:border-white/15 hover:bg-white/3"
-            >
-              <Github
-                size={15}
-                className="text-white/35 transition-colors group-hover:text-white"
-              />
-
-              <span className="text-xs text-white/40 transition-colors group-hover:text-white/70">
-                GitHub
-              </span>
-
-              <ArrowUpRight
-                size={12}
-                className="text-white/20 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/ponsanthonyadvento"
-              target="_blank"
-              rel="noreferrer"
-              className="group flex items-center gap-3 rounded-full border border-white/8 px-4 py-2.5 transition-all duration-300 hover:border-white/15 hover:bg-white/3"
-            >
-              <Linkedin
-                size={15}
-                className="text-white/35 transition-colors group-hover:text-white"
-              />
-
-              <span className="text-xs text-white/40 transition-colors group-hover:text-white/70">
-                LinkedIn
-              </span>
-
-              <ArrowUpRight
-                size={12}
-                className="text-white/20 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
-            </a>
-          </div>
+          <a
+            href="tel:+639617508181"
+            className="rounded-full border border-white/10 px-7 py-4 text-sm font-medium text-white/50 transition-all duration-300 hover:border-white/20 hover:text-white"
+          >
+            +63 961 750 8181
+          </a>
         </motion.div>
 
-        {/* ========================================================
-        FOOTER
-    ========================================================= */}
-        <footer className="mt-24 border-t border-white/[0.07] pt-8">
-          <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-            {/* Brand */}
+        <p className="mt-[clamp(1rem,3dvh,1.5rem)] text-sm text-white/35">
+          ponsadvento08@gmail.com
+        </p>
+      </div>
+
+      {/* ========================================================
+      FOOTER
+  ========================================================= */}
+      <footer className="relative z-10 mx-auto mt-10 w-full max-w-7xl border-t border-white/[0.07] pt-6">
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          {/* Brand */}
+          <a href="#top" className="group inline-flex items-center gap-3">
+            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-xs font-semibold text-white/60 transition-all duration-300 group-hover:border-[#B88746]/40 group-hover:text-[#D1A96D]">
+              PA
+            </span>
+
             <div>
-              <a href="#top" className="group inline-flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-xs font-semibold text-white/60 transition-all duration-300 group-hover:border-[#B88746]/40 group-hover:text-[#D1A96D]">
-                  PA
-                </span>
+              <p className="text-sm font-semibold tracking-[-0.02em] text-white/75">
+                Pons Anthony Advento
+              </p>
 
-                <div>
-                  <p className="text-sm font-semibold tracking-[-0.02em] text-white/75">
-                    Pons Anthony Advento
-                  </p>
-
-                  <p className="mt-0.5 text-[10px] tracking-[0.16em] text-white/25 uppercase">
-                    Software Developer
-                  </p>
-                </div>
-              </a>
+              <p className="mt-0.5 text-[10px] tracking-[0.16em] text-white/25 uppercase">
+                © {new Date().getFullYear()} · Your vision. My code.
+              </p>
             </div>
+          </a>
 
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
             {/* Footer navigation */}
             <nav className="flex flex-wrap gap-x-6 gap-y-3">
               {[
-                ["About", "#about"],
-                ["Projects", "#projects"],
-                ["Process", "#process"],
-                ["Contact", "#contact"],
+                ["Services", "#services"],
+                ["Why me", "#why-me"],
+                ["Work", "#projects"],
               ].map(([label, href]) => (
                 <a
                   key={label}
@@ -278,20 +149,32 @@ export default function Footer() {
                 </a>
               ))}
             </nav>
-          </div>
 
-          {/* Bottom line */}
-          <div className="mt-10 flex flex-col gap-3 border-t border-white/5 py-6 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-[10px] tracking-[0.14em] text-white/20 uppercase">
-              © {new Date().getFullYear()} Pons Anthony Advento
-            </p>
+            {/* Social links */}
+            <div className="flex items-center gap-2">
+              <a
+                href="https://github.com/advento098"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/8 text-white/35 transition-all duration-300 hover:border-white/15 hover:text-white"
+              >
+                <Github size={15} />
+              </a>
 
-            <p className="text-[10px] tracking-[0.14em] text-white/20 uppercase">
-              Your vision. My code.
-            </p>
+              <a
+                href="https://www.linkedin.com/in/ponsanthonyadvento"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/8 text-white/35 transition-all duration-300 hover:border-white/15 hover:text-white"
+              >
+                <Linkedin size={15} />
+              </a>
+            </div>
           </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </section>
   );
 }

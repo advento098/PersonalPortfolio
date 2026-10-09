@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Screens too short to fit a full section; used to drop secondary details */
+@custom-variant short (@media (max-height: 700px));
+
 @theme {
   --font-default: "Inter";
 }
