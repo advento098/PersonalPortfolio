@@ -1,5 +1,7 @@
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Profile from "../assets/images/profile.jpg";
+import ProfileHover from "../assets/images/profile-hover.jpg";
 
 export default function Hero() {
   return (
@@ -166,11 +168,19 @@ export default function Hero() {
 
             {/* Main image card */}
             <div className="relative overflow-hidden rounded-4xl border border-black/[0.07] bg-white p-3 shadow-[0_30px_80px_rgba(0,0,0,0.08)]">
-              <div className="relative overflow-hidden rounded-3xl bg-[#EEEAE4]">
+              <div className="group/photo relative overflow-hidden rounded-3xl bg-[#EEEAE4]">
                 <img
-                  src="https://placehold.co/700x800/F0ECE5/171717?text=Anthony+Advento"
+                  src={Profile}
                   alt="Pons Anthony Advento"
-                  className="aspect-7/8 w-full object-cover grayscale-20"
+                  className="aspect-7/8 w-full object-cover object-top"
+                />
+
+                {/* Alternate expression, revealed on hover */}
+                <img
+                  src={ProfileHover}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300 group-hover/photo:opacity-100"
                 />
 
                 {/* Image overlay */}
