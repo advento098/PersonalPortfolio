@@ -5,6 +5,14 @@
 
 @theme {
   --font-default: "Inter";
+
+  --animate-marquee: marquee 60s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 @layer base {

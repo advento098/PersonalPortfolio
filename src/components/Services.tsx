@@ -1,5 +1,6 @@
 import SectionHeader from "./SectionHeader";
 import SkillCard from "./SkillCard";
+import TechMarquee from "./TechMarquee";
 
 export default function Services() {
   return (
@@ -46,6 +47,10 @@ export default function Services() {
             technologies={["Payment APIs", "Jitsi", "SignalR", "QuestPDF"]}
             delay={0.3}
           />
+        </div>
+
+        <div className="mt-[clamp(1.25rem,4dvh,2.5rem)]">
+          <TechMarquee />
         </div>
       </div>
     </section>

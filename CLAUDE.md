@@ -30,6 +30,8 @@ Every section is `min-h-dvh` with its content vertically centred, and is designe
 
 `SectionHeader.tsx` is the shared eyebrow + headline used by Services, WhyMe and Projects.
 
+`TechMarquee.tsx` (inside Services) is the scrolling tech-stack strip. Logos are SVGs in `src/assets/tech/` (from Simple Icons, CC0, and Devicon, MIT) loaded with `import.meta.glob` and drawn as CSS masks so they take the text colour. To add a technology, drop `<slug>.svg` there and add `{ name, icon: icon("<slug>") }` to `stack`; omit `icon` for a name-only pill. The `animate-marquee` keyframes live in `index.css`.
+
 ### Projects section
 
 `Projects.tsx` holds a `projects` data array and renders each entry as its own screen inside `#projects`. The first screen carries the section headline; later screens show only the eyebrow and an `NN / NN` counter, and the image side alternates. To add a project, append an entry:
