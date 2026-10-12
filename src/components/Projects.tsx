@@ -20,6 +20,13 @@ import Anlair4 from "../assets/images/anlair-4.png";
 import Anlair5 from "../assets/images/anlair-5.png";
 import Anlair6 from "../assets/images/anlair-6.png";
 import Anlair7 from "../assets/images/anlair-7.png";
+import Suki1 from "../assets/images/suki-1.png";
+import Suki2 from "../assets/images/suki-2.png";
+import Suki3 from "../assets/images/suki-3.png";
+import Suki4 from "../assets/images/suki-4.png";
+import Suki5 from "../assets/images/suki-5.png";
+import Suki6 from "../assets/images/suki-6.png";
+import Suki7 from "../assets/images/suki-7.png";
 
 import ProjectCarousel from "./ProjectCarousel";
 
@@ -146,6 +153,26 @@ const projects: Project[] = [
         </div>
       </div>
     ),
+  },
+  {
+    id: "suki",
+    name: "Suki",
+    label: "Retail · 04",
+    title: "Less tapping. Less thinking. More selling.",
+    description:
+      "A cash-first point-of-sale app for small businesses, published on Google Play. Ring up a sale, take cash, and see the change in a few taps, fully offline.",
+    tech: [".NET MAUI", "C#", "XAML", "Android", "Offline storage"],
+    footer: "Mobile product · Google Play",
+    images: [Suki1, Suki2, Suki3, Suki4, Suki5, Suki6, Suki7],
+    alts: [
+      "Suki on three phone screens: the Sell grid with a cart, cash checkout showing change due, and the daily sales summary",
+      "Suki Sell screen on a wide layout with favorite products and the current sale beside them, ready to charge ₱135",
+      "Suki checkout with ₱200 received from quick-cash buttons and ₱65 change due",
+      "Suki Today summary with total sales, transactions, average sale, profit, and best sellers",
+      "Suki sales history with completed sales and a refund recorded as its own linked entry",
+      "Suki product list with categories, prices, and favorite stars",
+      "Suki welcome screen with Resi the receipt mascot and the option to start with sample products",
+    ],
   },
   {
     id: "enotary",

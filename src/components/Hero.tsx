@@ -129,7 +129,7 @@ export default function Hero() {
               className="mt-[clamp(1.5rem,5dvh,3rem)] flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-black/[0.07] pt-[clamp(1rem,3dvh,1.5rem)] short:hidden"
             >
               <div>
-                <p className="text-lg font-semibold tracking-tight">4</p>
+                <p className="text-lg font-semibold tracking-tight">5</p>
                 <p className="mt-0.5 text-xs text-black/40">Featured systems</p>
               </div>
 
