@@ -96,13 +96,6 @@ export default function Footer() {
               <ArrowUpRight size={14} />
             </span>
           </a>
-
-          <a
-            href="tel:+639617508181"
-            className="rounded-full border border-white/10 px-7 py-4 text-sm font-medium text-white/50 transition-all duration-300 hover:border-white/20 hover:text-white"
-          >
-            +63 961 750 8181
-          </a>
         </motion.div>
 
         <p className="mt-[clamp(1rem,3dvh,1.5rem)] text-sm text-white/35">
